@@ -4,7 +4,7 @@ steps:
   args:
     - 'run'
     - '-f'
-    - '/resources.yaml'
+    - './resources.yaml'
     - '--label=env-commit-sha=${SHORT_SHA}'
     - '--location=us-west1'
     - '--cluster=oregon'

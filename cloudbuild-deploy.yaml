@@ -1,0 +1,12 @@
+steps:
+- id: build-tag-push-render
+  name: "gcr.io/k8s-skaffold/skaffold:v1.12.1"
+  entrypoint: '/bin/bash'
+  args:
+    - '-c'
+    - |
+      skaffold deploy
+  env:
+    - 'CLOUDSDK_COMPUTE_REGION=us-west1'
+    - 'CLOUDSDK_CONTAINER_CLUSTER=oregon'
+    - 'GCLOUD_PROJECT=agmsb-k8s'

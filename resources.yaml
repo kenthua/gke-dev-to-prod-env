@@ -11,7 +11,7 @@ metadata:
     skaffold.dev/deployer: kustomize
     skaffold.dev/docker-api-version: "1.40"
     skaffold.dev/profile.0: prod
-    skaffold.dev/run-id: 4bc51536-968e-485a-8754-4d779f63dc09
+    skaffold.dev/run-id: 6ac22ce1-c72f-45c0-9604-e1cce2bebaa4
     skaffold.dev/tag-policy: custom
   name: alpha-features-6992b4959t
   namespace: prod
@@ -28,7 +28,7 @@ metadata:
     skaffold.dev/deployer: kustomize
     skaffold.dev/docker-api-version: "1.40"
     skaffold.dev/profile.0: prod
-    skaffold.dev/run-id: 4bc51536-968e-485a-8754-4d779f63dc09
+    skaffold.dev/run-id: 6ac22ce1-c72f-45c0-9604-e1cce2bebaa4
     skaffold.dev/tag-policy: custom
   name: gke-flask-app
   namespace: prod
@@ -54,7 +54,7 @@ metadata:
     skaffold.dev/deployer: kustomize
     skaffold.dev/docker-api-version: "1.40"
     skaffold.dev/profile.0: prod
-    skaffold.dev/run-id: 4bc51536-968e-485a-8754-4d779f63dc09
+    skaffold.dev/run-id: 6ac22ce1-c72f-45c0-9604-e1cce2bebaa4
     skaffold.dev/tag-policy: custom
   name: gke-flask-app
   namespace: prod
@@ -75,7 +75,7 @@ spec:
         skaffold.dev/deployer: kustomize
         skaffold.dev/docker-api-version: "1.40"
         skaffold.dev/profile.0: prod
-        skaffold.dev/run-id: 4bc51536-968e-485a-8754-4d779f63dc09
+        skaffold.dev/run-id: 6ac22ce1-c72f-45c0-9604-e1cce2bebaa4
         skaffold.dev/tag-policy: custom
     spec:
       containers:
@@ -85,7 +85,7 @@ spec:
             configMapKeyRef:
               key: ENABLE_ALPHA
               name: alpha-features-6992b4959t
-        image: gcr.io/agmsb-k8s/gke-flask-app:69955d3@sha256:10b53f51d0214a6268077d3915a71ead85ae8a4098c13a68172fd49f1347dbc2
+        image: gcr.io/agmsb-k8s/gke-flask-app:238dcfc@sha256:190a01fd045e89c988eb013a722a6c2a814e52a7dcd16b6dc29bd0080cb8da17
         imagePullPolicy: IfNotPresent
         name: gke-flask-app
         ports:

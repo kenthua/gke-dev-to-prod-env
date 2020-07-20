@@ -1,10 +1,9 @@
 apiVersion: v1
 data:
-  enableAlpha: "false"
+  ENABLE_ALPHA: "false"
 kind: ConfigMap
 metadata:
   labels:
-    app: flask
     app.kubernetes.io/managed-by: skaffold-v1.12.1
     env: prod
     skaffold.dev/builder: local
@@ -12,9 +11,9 @@ metadata:
     skaffold.dev/deployer: kustomize
     skaffold.dev/docker-api-version: "1.40"
     skaffold.dev/profile.0: prod
-    skaffold.dev/run-id: 27aa3d47-efa3-4eaf-b72f-dbee6f64bec7
+    skaffold.dev/run-id: 01d882d6-dfe3-402a-8d98-bd003a2ddfb5
     skaffold.dev/tag-policy: custom
-  name: alpha-features
+  name: alpha-features-6992b4959t
   namespace: prod
 ---
 apiVersion: v1
@@ -29,7 +28,7 @@ metadata:
     skaffold.dev/deployer: kustomize
     skaffold.dev/docker-api-version: "1.40"
     skaffold.dev/profile.0: prod
-    skaffold.dev/run-id: 27aa3d47-efa3-4eaf-b72f-dbee6f64bec7
+    skaffold.dev/run-id: 01d882d6-dfe3-402a-8d98-bd003a2ddfb5
     skaffold.dev/tag-policy: custom
   name: gke-flask-app
   namespace: prod
@@ -55,7 +54,7 @@ metadata:
     skaffold.dev/deployer: kustomize
     skaffold.dev/docker-api-version: "1.40"
     skaffold.dev/profile.0: prod
-    skaffold.dev/run-id: 27aa3d47-efa3-4eaf-b72f-dbee6f64bec7
+    skaffold.dev/run-id: 01d882d6-dfe3-402a-8d98-bd003a2ddfb5
     skaffold.dev/tag-policy: custom
   name: gke-flask-app
   namespace: prod
@@ -76,7 +75,7 @@ spec:
         skaffold.dev/deployer: kustomize
         skaffold.dev/docker-api-version: "1.40"
         skaffold.dev/profile.0: prod
-        skaffold.dev/run-id: 27aa3d47-efa3-4eaf-b72f-dbee6f64bec7
+        skaffold.dev/run-id: 01d882d6-dfe3-402a-8d98-bd003a2ddfb5
         skaffold.dev/tag-policy: custom
     spec:
       containers:
@@ -84,9 +83,9 @@ spec:
         - name: ENABLE_ALPHA
           valueFrom:
             configMapKeyRef:
-              key: enableAlpha
-              name: alpha-features
-        image: gcr.io/agmsb-k8s/gke-flask-app:a21eaac@sha256:5af276feb0bb3fab97de618d5b064897acd3df118e8cdd7d195d6d9880c58865
+              key: ENABLE_ALPHA
+              name: alpha-features-6992b4959t
+        image: gcr.io/agmsb-k8s/gke-flask-app:0899878@sha256:6e4f4e0f356035ce8301275c467fa354187f72ad3be3261e625f6582bf7a8964
         imagePullPolicy: IfNotPresent
         name: gke-flask-app
         ports:

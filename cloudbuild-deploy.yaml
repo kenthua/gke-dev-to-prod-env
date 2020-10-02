@@ -9,4 +9,4 @@ steps:
   env:
     - 'CLOUDSDK_COMPUTE_REGION=us-west1'
     - 'CLOUDSDK_CONTAINER_CLUSTER=oregon'
-    - 'GCLOUD_PROJECT=agmsb-k8s'
+    - 'GCLOUD_PROJECT=kenthua-core'

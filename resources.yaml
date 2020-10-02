@@ -6,7 +6,7 @@ metadata:
   labels:
     app.kubernetes.io/managed-by: skaffold
     env: prod
-    skaffold.dev/run-id: 8743ea5c-bca5-4a19-84e2-1aa53967ef5b
+    skaffold.dev/run-id: fd88b840-4513-44b1-ab00-cbbae741f863
   name: alpha-features-6992b4959t
   namespace: prod
 ---
@@ -17,7 +17,7 @@ metadata:
     app: flask
     app.kubernetes.io/managed-by: skaffold
     env: prod
-    skaffold.dev/run-id: 8743ea5c-bca5-4a19-84e2-1aa53967ef5b
+    skaffold.dev/run-id: fd88b840-4513-44b1-ab00-cbbae741f863
   name: gke-flask-app
   namespace: prod
 spec:
@@ -37,7 +37,7 @@ metadata:
     app: flask
     app.kubernetes.io/managed-by: skaffold
     env: prod
-    skaffold.dev/run-id: 8743ea5c-bca5-4a19-84e2-1aa53967ef5b
+    skaffold.dev/run-id: fd88b840-4513-44b1-ab00-cbbae741f863
   name: gke-flask-app
   namespace: prod
 spec:
@@ -52,7 +52,7 @@ spec:
         app: flask
         app.kubernetes.io/managed-by: skaffold
         env: prod
-        skaffold.dev/run-id: 8743ea5c-bca5-4a19-84e2-1aa53967ef5b
+        skaffold.dev/run-id: fd88b840-4513-44b1-ab00-cbbae741f863
     spec:
       containers:
       - env:
@@ -61,7 +61,7 @@ spec:
             configMapKeyRef:
               key: ENABLE_ALPHA
               name: alpha-features-6992b4959t
-        image: gcr.io/kenthua-core/gke-flask-app:9c4fc26@sha256:59584f5705c3ecc8022bddcb7d490556b8a72e2cb99e0a46c3769358ae45aa28
+        image: gcr.io/kenthua-core/gke-flask-app:679eb04@sha256:499e6c5cfc9f11f591b65fa82ffdf81eca8a5aff6d8fbc2dce0703737e61a0fa
         imagePullPolicy: IfNotPresent
         name: gke-flask-app
         ports:

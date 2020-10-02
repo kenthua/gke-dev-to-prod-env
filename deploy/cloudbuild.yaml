@@ -6,5 +6,5 @@ steps:
     - '-f'
     - './resources.yaml'
     - '--label=env-commit-sha=${SHORT_SHA}'
-    - '--location=us-west1'
-    - '--cluster=oregon'
+    - '--location=us-west1-b'
+    - '--cluster=skaffold-prod-cluster'

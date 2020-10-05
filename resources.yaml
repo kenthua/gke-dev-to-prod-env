@@ -4,15 +4,9 @@ data:
 kind: ConfigMap
 metadata:
   labels:
-    app.kubernetes.io/managed-by: skaffold-v1.12.1
+    app.kubernetes.io/managed-by: skaffold
     env: prod
-    skaffold.dev/builder: local
-    skaffold.dev/cleanup: "true"
-    skaffold.dev/deployer: kustomize
-    skaffold.dev/docker-api-version: "1.40"
-    skaffold.dev/profile.0: prod
-    skaffold.dev/run-id: 6ac22ce1-c72f-45c0-9604-e1cce2bebaa4
-    skaffold.dev/tag-policy: custom
+    skaffold.dev/run-id: b68bc486-34e0-4b4d-bf36-1fcebe2694a5
   name: alpha-features-6992b4959t
   namespace: prod
 ---
@@ -21,15 +15,9 @@ kind: Service
 metadata:
   labels:
     app: flask
-    app.kubernetes.io/managed-by: skaffold-v1.12.1
+    app.kubernetes.io/managed-by: skaffold
     env: prod
-    skaffold.dev/builder: local
-    skaffold.dev/cleanup: "true"
-    skaffold.dev/deployer: kustomize
-    skaffold.dev/docker-api-version: "1.40"
-    skaffold.dev/profile.0: prod
-    skaffold.dev/run-id: 6ac22ce1-c72f-45c0-9604-e1cce2bebaa4
-    skaffold.dev/tag-policy: custom
+    skaffold.dev/run-id: b68bc486-34e0-4b4d-bf36-1fcebe2694a5
   name: gke-flask-app
   namespace: prod
 spec:
@@ -47,15 +35,9 @@ kind: Deployment
 metadata:
   labels:
     app: flask
-    app.kubernetes.io/managed-by: skaffold-v1.12.1
+    app.kubernetes.io/managed-by: skaffold
     env: prod
-    skaffold.dev/builder: local
-    skaffold.dev/cleanup: "true"
-    skaffold.dev/deployer: kustomize
-    skaffold.dev/docker-api-version: "1.40"
-    skaffold.dev/profile.0: prod
-    skaffold.dev/run-id: 6ac22ce1-c72f-45c0-9604-e1cce2bebaa4
-    skaffold.dev/tag-policy: custom
+    skaffold.dev/run-id: b68bc486-34e0-4b4d-bf36-1fcebe2694a5
   name: gke-flask-app
   namespace: prod
 spec:
@@ -68,15 +50,9 @@ spec:
     metadata:
       labels:
         app: flask
-        app.kubernetes.io/managed-by: skaffold-v1.12.1
+        app.kubernetes.io/managed-by: skaffold
         env: prod
-        skaffold.dev/builder: local
-        skaffold.dev/cleanup: "true"
-        skaffold.dev/deployer: kustomize
-        skaffold.dev/docker-api-version: "1.40"
-        skaffold.dev/profile.0: prod
-        skaffold.dev/run-id: 6ac22ce1-c72f-45c0-9604-e1cce2bebaa4
-        skaffold.dev/tag-policy: custom
+        skaffold.dev/run-id: b68bc486-34e0-4b4d-bf36-1fcebe2694a5
     spec:
       containers:
       - env:
@@ -85,7 +61,7 @@ spec:
             configMapKeyRef:
               key: ENABLE_ALPHA
               name: alpha-features-6992b4959t
-        image: gcr.io/kenthua-core/gke-flask-app:238dcfc@sha256:190a01fd045e89c988eb013a722a6c2a814e52a7dcd16b6dc29bd0080cb8da17
+        image: gcr.io/kenthua-core/gke-flask-app:2593ade@sha256:d5f077a0618e535cf88d842470673f76644dfcb467d3985d2ad923a06cd6545c
         imagePullPolicy: IfNotPresent
         name: gke-flask-app
         ports:

@@ -6,12 +6,7 @@ steps:
   - -xe
   - -c
   - |
-<<<<<<< HEAD
      /scripts/check_vulnerabilities.sh -p $PROJECT_ID -i gcr.io/$PROJECT_ID/gke-flask-app:${SHORT_SHA} -t 5
-=======
-     /scripts/check_vulnerabilities.sh -p $PROJECT_ID -i gcr.io/$PROJECT_ID/gke-flasp-app:${SHORT_SHA} -t 5
->>>>>>> 63639f2 (add binauthz)
-
 - name: 'gcr.io/$PROJECT_ID/cloudbuild-attestor'
   id: 'Attest Vulnerability Scan'
   entrypoint: 'sh'
@@ -19,11 +14,7 @@ steps:
   - -xe
   - -c
   - |-
-<<<<<<< HEAD
-      FQ_DIGEST=$(gcloud container images describe --format 'value(image_summary.fully_qualified_digest)' gcr.io/$PROJECT_ID/gke-flask-app:$SHORT_SHA)
-=======
-      FQ_DIGEST=$(gcloud container images describe --format 'value(image_summary.fully_qualified_digest)' gcr.io/$PROJECT_ID/gke-flasp-app:$SHORT_SHA)
->>>>>>> 63639f2 (add binauthz)
+      FQ_DIGEST=$(gcloud container images describe --format 'value(image_summary.fully_qualified_digest)' gcr.io/$PROJECT_ID/gke-flask-app:${SHORT_SHA})
       /scripts/create_attestation.sh \
         -p "$PROJECT_ID" \
         -i "$${FQ_DIGEST}" \
